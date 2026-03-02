@@ -16,9 +16,9 @@ export function fetchCalls(): Promise<Call[]> {
   });
 }
 
-export function updateCallStatus(
+export function updateCallStatus( {id, status }: {
   id: string,
-  status: Call["status"],
+  status: Call["status"] },     // 1
 ): Promise<Call> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
